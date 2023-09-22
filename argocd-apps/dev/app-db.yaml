@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: result
+  name: db-dev
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'https://github.com/leandromrocha/argocd.git'
-    path: result
+    path: dev/db
     targetRevision: master
   destination:
     namespace: argocd

@@ -10,7 +10,7 @@ spec:
     path: dev/worker
     targetRevision: master
   destination:
-    namespace: argocd
+    namespace: vote-dev
     name: in-cluster
   syncPolicy:
     automated:

@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: worker-hml
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/leandromrocha/argocd.git'
+    path: hml/worker
+    targetRevision: master
+  destination:
+    namespace: vote-hml
+    name: in-cluster
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - ApplyOutOfSyncOnly=true

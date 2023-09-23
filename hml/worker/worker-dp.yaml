@@ -4,7 +4,7 @@ metadata:
   labels:
     app: worker
   name: worker
-  namespace: vote-dev
+  namespace: vote-hml
 spec:
   replicas: 1
   selector:

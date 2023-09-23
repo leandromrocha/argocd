@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: vote-hml
+  name: vote-prd
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'https://github.com/leandromrocha/argocd.git'
-    path: hml/vote
+    path: prd/vote
     targetRevision: master
   destination:
-    namespace: vote-hml
+    namespace: vote-prd
     name: in-cluster
   syncPolicy:
     automated:

@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: worker-hml
+  name: worker-prd
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'https://github.com/leandromrocha/argocd.git'
-    path: hml/worker
+    path: prd/worker
     targetRevision: master
   destination:
-    namespace: vote-hml
+    namespace: vote-prd
     name: in-cluster
   syncPolicy:
     automated:
